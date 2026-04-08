@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khizra Mehmood — Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e4d44',
+                        accent: '#d4c3a1',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .glass { backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-gray-800/50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-all">KM</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                    <a href="#services" class="hover:text-accent transition-colors">Services</a>
+                    <a href="#expertise" class="hover:text-accent transition-colors">Expertise</a>
+                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-4 pb-4">
+                <a href="#home" class="block hover:text-accent py-2">Home</a>
+                <a href="#services" class="block hover:text-accent py-2">Services</a>
+                <a href="#expertise" class="block hover:text-accent py-2">Expertise</a>
+                <a href="#contact" class="block hover:text-accent py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6 leading-tight">
+                Khizra Mehmood
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Turning Small Businesses into Big Brands with Custom, High-Performance Websites.
+            </p>
+            <a href="#contact" class="inline-block bg-primary hover:bg-accent text-black font-semibold py-4 px-12 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/25">
+                Start Your Project
+            </a>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">Services</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Custom web solutions designed to scale your business</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-3xl p-10 hover:border-accent/50 hover:bg-gray-800/70 transition-all duration-500 hover:scale-105 hover:-translate-y-4 fade-in">
+                    <div class="w-20 h-20 bg-primary/20 group-hover:bg-accent/30 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+                        <i class="fas fa-shopping-cart text-3xl text-primary group-hover:text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">E-commerce Stores</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Custom Shopify or Python-based shopping solutions that convert visitors into customers.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-3xl p-10 hover:border-accent/50 hover:bg-gray-800/70 transition-all duration-500 hover:scale-105 hover:-translate-y-4 fade-in animation-delay-200">
+                    <div class="w-20 h-20 bg-primary/20 group-hover:bg-accent/30 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+                        <i class="fas fa-rocket text-3xl text-primary group-hover:text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Landing Pages</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">High-converting pages for marketing campaigns that drive results.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-3xl p-10 hover:border-accent/50 hover:bg-gray-800/70 transition-all duration-500 hover:scale-105 hover:-translate-y-4 fade-in animation-delay-400">
+                    <div class="w-20 h-20 bg-primary/20 group-hover:bg-accent/30 rounded-2xl flex items-center justify-center mb-6 transition-colors">
+                        <i class="fas fa-images text-3xl text-primary group-hover:text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Portfolio Sites</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Elegant personal brands for professionals that showcase your best work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-6">Expertise</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Driven by Software Engineering principles for scalable and clean code.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-6 max-w-4xl mx-auto">
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 text-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-python text-4xl text-yellow-400 mb-4 block"></i>
+                    <span class="font-semibold text-white">Python</span>
+                </div>
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 text-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4 block"></i>
+                    <span class="font-semibold text-white">HTML5</span>
+                </div>
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 text-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-css3-alt text-4xl text-blue-400 mb-4 block"></i>
+                    <span class="font-semibold text-white">CSS3</span>
+                </div>
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 text-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-js-square text-4xl text-yellow-400 mb-4 block"></i>
+                    <span class="font-semibold text-white">JavaScript</span>
+                </div>
+                <div class="group bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl p-8 text-center hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-server text-4xl text-primary mb-4 block"></i>
+                    <span class="font-semibold text-white">Django/Flask</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">Let's Build Something Amazing</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Ready to transform your business? Get in touch today.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Contact Form -->
+                <form class="space-y-6 fade-in" action="#" method="POST">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Name</label>
+                        <input type="text" name="name" required class="w-full bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl px-6 py-4 text-white placeholder-gray-500 focus:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Email</label>
+                        <input type="email" name="email" required class="w-full bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl px-6 py-4 text-white placeholder-gray-500 focus:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Message</label>
+                        <textarea name="message" rows="5" required class="w-full bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl px-6 py-4 text-white placeholder-gray-500 focus:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all resize-vertical" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-accent text-black font-semibold py-6 px-8 rounded-2xl text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/25">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Social Links -->
+                <div class="space-y-8 fade-in animation-delay-200">
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-2xl font-bold mb-6 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Get In Touch</h3>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="https://wa.me/03325765669" target="_blank" class="group flex items-center justify-center lg:justify-start gap-4 bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl px-6 py-4 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-105">
+                                <i class="fab fa-whatsapp text-2xl text-green-500 group-hover:scale-110 transition-transform"></i>
+                                <span class="font-semibold">WhatsApp</span>
+                            </a>
+                            <a href="https://instagram.com/devbykhizra" target="_blank" class="group flex items-center justify-center lg:justify-start gap-4 bg-gray-900/50 backdrop-blur-md border border-gray-800/50 rounded-2xl px-6 py-4 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-105">
+                                <i class="fab fa-instagram text-2xl bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-xl group-hover:scale-110 transition-transform"></i>
+                                <span class="font-semibold">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/50 py-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-500">&copy; 2024 Khizra Mehmood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = entry.target.dataset.delay || '0s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission (demo)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent. I\'ll get back to you soon.');
+            this.reset();
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black/80');
+            } else {
+                nav.classList.remove('bg-black/80');
+            }
+        });
+    </script>
+</body>
+</html>
